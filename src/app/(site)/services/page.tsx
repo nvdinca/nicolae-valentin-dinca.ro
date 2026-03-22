@@ -83,11 +83,18 @@ export default function ServicesPage() {
               The Luxury Agent Digital Identity™
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">
-              Aceasta este oferta mea semnătură. Lucrez direct cu tine ca să
-              construim un brand și un website care spun clar cine ești și de ce
-              ești alegerea serioasă în segmentul tău – în trei versiuni
-              adaptate: pentru agenți imobiliari, pentru agenții imobiliare și
-              pentru dezvoltatori imobiliari.
+              O experiență completă de brand digital și website custom, creată
+              pentru agenți, echipe și agenții de real estate de lux care vor
+              mai mult decât „un simplu site”.
+            </p>
+            <p className="mt-4 text-sm font-medium tracking-wide text-foreground/70">
+              Nu vinzi proprietăți obișnuite. Site‑ul tău nu ar trebui să arate
+              ca unul obișnuit.
+            </p>
+            <p className="mt-6 text-foreground/80 leading-relaxed">
+              Aceasta este oferta mea semnătură — The Luxury Agent Digital
+              Identity™ — în trei versiuni adaptate: agenți independenți,
+              agenții boutique și dezvoltatori cu proiecte premium.
             </p>
             <p className="mt-4 text-foreground/75">
               Nu promit minuni peste noapte, nu lucrez cu template‑uri și nu

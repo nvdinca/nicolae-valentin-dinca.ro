@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Despre | Nicolae-Valentin Dincă",
   description:
-    "Cine sunt, de ce lucrez full‑stack și de ce m-am specializat în platforme digitale pentru imobiliare de lux.",
+    "Luxury Real Estate Full‑Stack Web Developer: de la site-uri generice la platforme digitale custom pentru agenți, agenții și developeri de lux.",
 };
 
 export default function AboutPage() {
@@ -21,10 +21,9 @@ export default function AboutPage() {
               Despre
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-              Sunt Nicolae-Valentin Dincă, developer full‑stack specializat în imobiliare de
-              lux. Lucrez cu agenți, agenții și dezvoltatori care știu că un
-              site generic nu mai este suficient și vor o platformă digitală
-              care chiar susține felul în care fac business.
+              Sunt Luxury Real Estate Full‑Stack Web Developer și ajut agenți,
+              agenții și developeri de real estate de lux să treacă de la
+              site‑uri generice la platforme digitale custom, construite cap‑coadă.
             </p>
           </div>
         </Container>
@@ -40,6 +39,26 @@ export default function AboutPage() {
               Am început în web development din curiozitate: voiam să înțeleg
               cum funcționează lucrurile „sub capotă” și cum poți construi
               experiențe care par simple, dar au multă logică în spate.
+            </p>
+            <p>
+              Timpul m-a dus spre proiecte unde imaginea și încrederea contează
+              la fel de mult ca funcționalitatea — iar în real estate de lux,
+              aceste două lucruri se întâlnesc în fiecare listare.
+            </p>
+            <p>
+              Am ales să lucrez full‑stack (design + development) pentru că nu
+              vreau să livrez „doar un design” sau „doar cod”: vreau o platformă
+              coerentă, de la prima schiță până la performanță în producție.
+            </p>
+            <p>
+              Am văzut prea des site‑uri de agenți și agenții care arată la fel,
+              cu mesaje interșanjabile și zero poziționare. Sau platforme frumoase
+              în mockup, dar lente și greu de întreținut după lansare.
+            </p>
+            <p>
+              Ce vreau să schimb: să tratezi site‑ul ca pe un asset de business
+              — clar, memorabil, rapid — nu ca pe un PDF online. Dacă asta
+              rezonează cu tine, suntem în același film.
             </p>
           </div>
         </Container>
@@ -115,7 +134,54 @@ export default function AboutPage() {
       <Section className="border-t border-foreground/10">
         <Container>
           <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
-            Ce mă diferențiază
+            Cum arată colaborarea din perspectiva ta
+          </h2>
+          <ul className="mt-8 max-w-3xl list-disc space-y-3 pl-5 text-foreground/80 leading-relaxed">
+            <li>
+              Te cunosc pe tine și piața ta înainte să deschidem editorul de cod.
+            </li>
+            <li>
+              Îți propun o arhitectură și un design gândite pentru leaduri și
+              poziționare, nu doar pentru „pagini frumoase”.
+            </li>
+            <li>
+              Construiesc, testez, lansez și rămân alături pentru ajustări și
+              evoluție.
+            </li>
+          </ul>
+        </Container>
+      </Section>
+
+      <Section className="border-t border-foreground/10">
+        <Container>
+          <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
+            De ce clienții mei rămân cu mine pe termen lung
+          </h2>
+          <ul className="mt-8 max-w-3xl list-disc space-y-3 pl-5 text-foreground/80 leading-relaxed">
+            <li>
+              Comunicare clară, fără jargon inutil — știi la ce să te aștepți la
+              fiecare pas.
+            </li>
+            <li>
+              Rezultate măsurabile în leaduri, viteză și feedback de la
+              utilizatori.
+            </li>
+            <li>
+              Disponibilitate pentru iterații și pentru felul în care se schimbă
+              piața după lansare.
+            </li>
+            <li>
+              Relație construită pe încredere, nu pe „livrare și la revedere”.
+            </li>
+          </ul>
+        </Container>
+      </Section>
+
+      <Section className="border-t border-foreground/10">
+        <Container>
+          <h2 className="font-serif text-3xl tracking-tight md:text-4xl">
+            Ce mă diferențiază față de un simplu web designer sau o agenție
+            generalistă
           </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {[

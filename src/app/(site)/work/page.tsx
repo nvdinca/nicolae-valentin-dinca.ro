@@ -22,9 +22,9 @@ export default function WorkPage() {
               Proiecte selectate
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-              O selecție de proiecte pentru agenți, agenții și developeri de
-              real estate de lux pentru care am construit platforme digitale
-              custom, end‑to‑end.
+              Fiecare proiect de mai jos este un studiu de caz: context, obiectiv,
+              soluție și (unde e cazul) rezultat — platforme digitale custom,
+              end‑to‑end, pentru real estate de lux.
             </p>
           </div>
 

@@ -3,11 +3,12 @@ import { Container } from "@/components/layout/Container";
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { SITE_INTRO_I_AM } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Despre | Nicolae-Valentin Dincă",
   description:
-    "Luxury Imobiliare Full‑Stack Custom Web Developer: de la site‑uri generice la platforme digitale custom pentru agenți, agențiile și dezvoltatorii de lux.",
+    "De la site‑uri generice la platforme digitale custom pentru agenți, agențiile și dezvoltatorii de lux — dezvoltator web full‑stack pentru imobiliare de lux.",
 };
 
 export default function AboutPage() {
@@ -21,9 +22,9 @@ export default function AboutPage() {
               Despre
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-              Sunt Luxury Imobiliare Full‑Stack Custom Web Developer și ajut agenți,
-              agențiile și dezvoltatorii de imobiliare de lux să treacă de la
-              site‑uri generice la platforme digitale custom, construite cap‑coadă.
+              {SITE_INTRO_I_AM} și ajut agenți, agențiile și dezvoltatorii de
+              imobiliare de lux să treacă de la site‑uri generice la platforme
+              digitale custom, construite cap‑coadă.
             </p>
           </div>
         </Container>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/shared/Section";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { SITE_JOB_TITLE } from "@/lib/brand";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -16,7 +17,7 @@ const serviceSchema = {
     "@type": "Person",
     name: "Nicolae-Valentin Dincă",
     url: "https://nicolae-valentin-dinca.ro",
-    jobTitle: "Luxury Imobiliare Full‑Stack Custom Web Developer",
+    jobTitle: SITE_JOB_TITLE,
   },
   areaServed: {
     "@type": "Country",

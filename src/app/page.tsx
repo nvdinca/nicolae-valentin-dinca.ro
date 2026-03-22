@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/shared/Section";
+import { SITE_INTRO_I_AM } from "@/lib/brand";
 import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
   title:
     "Platforme digitale custom pentru imobiliare de lux | Nicolae-Valentin Dincă",
   description:
-    "Luxury Imobiliare Full‑Stack Custom Web Developer: site‑uri și platforme care poziționează agenți, agențiile și dezvoltatorii în liga premium. Design cinematic, arhitectură full‑stack, conversie.",
+    "Dezvoltator web full‑stack pentru imobiliare de lux: site‑uri și platforme care poziționează agenți, agențiile și dezvoltatorii în liga premium. Design cinematic, arhitectură full‑stack, conversie.",
 };
 
 const homeProjects = projects.slice(0, 3);
@@ -26,9 +27,9 @@ export default function Home() {
               Platforme digitale custom pentru imobiliare de lux.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">
-              Sunt Luxury Imobiliare Full‑Stack Custom Web Developer și construiesc
-              site‑uri și platforme care poziționează agenți, agențiile și
-              dezvoltatorii acolo unde le este locul: în liga premium.
+              {SITE_INTRO_I_AM} și construiesc site‑uri și platforme care
+              poziționează agenți, agențiile și dezvoltatorii acolo unde le este
+              locul: în liga premium.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">

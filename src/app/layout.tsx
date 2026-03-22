@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
 import { AccessibilityButton } from "@/components/shared/AccessibilityButton";
+import { SITE_JOB_TITLE } from "@/lib/brand";
 import { sameAsUrls } from "@/lib/social";
 import Script from "next/script";
 
@@ -26,8 +27,7 @@ export const metadata: Metadata = {
     default: "Nicolae-Valentin Dincă",
     template: "%s | Nicolae-Valentin Dincă",
   },
-  description:
-    "Luxury Imobiliare Full‑Stack Custom Web Developer. Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux.",
+  description: `${SITE_JOB_TITLE}. Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux.`,
   metadataBase: new URL("https://nicolae-valentin-dinca.ro"),
   openGraph: {
     title: "Nicolae-Valentin Dincă",
@@ -73,7 +73,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Nicolae-Valentin Dincă",
-    jobTitle: "Luxury Imobiliare Full‑Stack Custom Web Developer",
+    jobTitle: SITE_JOB_TITLE,
     url: "https://nicolae-valentin-dinca.ro",
     sameAs: sameAsUrls.filter((url) => !url.includes("TAI_")),
   };
@@ -84,7 +84,7 @@ export default function RootLayout({
     name: "Nicolae-Valentin Dincă",
     url: "https://nicolae-valentin-dinca.ro",
     description:
-      "Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux. Full‑stack web development și identitate digitală.",
+      "Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux. Dezvoltare web full‑stack și identitate digitală.",
     inLanguage: "ro-RO",
     publisher: {
       "@type": "Person",

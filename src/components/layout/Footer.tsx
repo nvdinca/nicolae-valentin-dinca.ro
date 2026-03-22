@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "./Container";
 import { SocialLinks } from "@/components/shared/SocialLinks";
 import { CookiePreferencesTrigger } from "@/components/cookie-consent/CookiePreferencesTrigger";
+import { SITE_SHORT_TAGLINE } from "@/lib/brand";
 
 export function Footer() {
   return (
@@ -29,9 +30,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <SocialLinks />
-            <p className="text-foreground/60">
-              Luxury Imobiliare • dezvoltare web full‑stack la comandă
-            </p>
+            <p className="text-foreground/60">{SITE_SHORT_TAGLINE}</p>
           </div>
         </div>
       </Container>

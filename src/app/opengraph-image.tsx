@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
+import { SITE_JOB_TITLE, SITE_SHORT_TAGLINE } from "@/lib/brand";
 
-export const alt =
-  "Nicolae-Valentin Dincă – Luxury Imobiliare Full‑Stack Custom Web Developer";
+export const alt = `Nicolae-Valentin Dincă — ${SITE_JOB_TITLE}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -38,7 +38,7 @@ export default async function Image() {
             opacity: 0.8,
           }}
         >
-          Luxury Imobiliare • dezvoltare web full‑stack la comandă
+          {SITE_SHORT_TAGLINE}
         </div>
       </div>
     ),

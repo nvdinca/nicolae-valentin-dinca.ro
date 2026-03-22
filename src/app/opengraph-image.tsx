@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Nicolae-Valentin Dincă – Luxury Imobiliare Full-Stack Web Developer";
+export const alt =
+  "Nicolae-Valentin Dincă – Luxury Imobiliare Full‑Stack Custom Web Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,7 +38,7 @@ export default async function Image() {
             opacity: 0.8,
           }}
         >
-          Luxury Imobiliare • Full-Stack Custom Web Development
+          Luxury Imobiliare • dezvoltare web full‑stack la comandă
         </div>
       </div>
     ),

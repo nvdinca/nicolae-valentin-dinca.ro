@@ -8,7 +8,7 @@ import { projects } from "@/content/projects";
 export const metadata: Metadata = {
   title: "Proiecte selectate | Nicolae-Valentin Dincă",
   description:
-    "Portofoliu cu proiecte pentru agenți, agenții și developeri din imobiliare de lux, pentru care am construit platforme digitale custom.",
+    "Portofoliu cu proiecte pentru agenți, agențiile și dezvoltatorii din imobiliare de lux, pentru care am construit platforme digitale custom.",
 };
 
 export default function WorkPage() {
@@ -16,7 +16,7 @@ export default function WorkPage() {
     <>
       <Section>
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Proiecte" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Proiecte" }]} />
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl tracking-tight md:text-5xl">
               Proiecte selectate
@@ -24,7 +24,7 @@ export default function WorkPage() {
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
               Fiecare proiect de mai jos este un studiu de caz: context, obiectiv,
               soluție și (unde e cazul) rezultat — platforme digitale custom,
-              end‑to‑end, pentru real estate de lux.
+              end‑to‑end, pentru imobiliare de lux.
             </p>
           </div>
 

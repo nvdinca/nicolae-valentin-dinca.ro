@@ -15,7 +15,7 @@ export default function ProcessPage() {
     <>
       <Section>
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Proces" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Proces" }]} />
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl tracking-tight md:text-5xl">
               Procesul prin care construiesc platforma ta digitală
@@ -39,7 +39,7 @@ export default function ProcessPage() {
             {[
               {
                 step: "01",
-                title: "Discovery & Strategy",
+                title: "Descoperire și strategie",
                 you: [
                   "Discuții inițiale, analiză business și piață.",
                   "Clarificarea obiectivelor (leaduri, poziționare, tipuri de clienți).",
@@ -53,18 +53,18 @@ export default function ProcessPage() {
               },
               {
                 step: "02",
-                title: "UX & Architecture",
+                title: "UX și arhitectură",
                 you: [
                   "Definire structură de pagini și flow‑uri pentru leaduri.",
                   "Wireframe‑uri / schițe pentru paginile cheie.",
                   "Decizii privind arhitectura tehnică (stack, integrare CRM, baze de date etc.).",
                 ],
                 client: ["Validează structura și prioritățile."],
-                deliverables: ["Site map / arhitectură.", "Wireframe‑uri de bază."],
+                deliverables: ["Hartă site / arhitectură.", "Wireframe‑uri de bază."],
               },
               {
                 step: "03",
-                title: "Design & Content",
+                title: "Design și conținut",
                 you: [
                   "Design vizual cinematic, minimalist, adaptat la segmentul luxury.",
                   "Propun structură de conținut și tone of voice în română.",
@@ -77,7 +77,7 @@ export default function ProcessPage() {
               },
               {
                 step: "04",
-                title: "Full‑Stack Development",
+                title: "Dezvoltare full‑stack",
                 you: [
                   "Implementare front‑end și back‑end pe stack‑ul ales.",
                   "Integrare cu CRM, formulare, automatizări, tracking.",
@@ -88,7 +88,7 @@ export default function ProcessPage() {
               },
               {
                 step: "05",
-                title: "Testing & Performance",
+                title: "Testare și performanță",
                 you: [
                   "Teste de funcționalitate, responsive și cross‑browser.",
                   "Optimizări de viteză, verificare metrici (Core Web Vitals).",
@@ -98,7 +98,7 @@ export default function ProcessPage() {
               },
               {
                 step: "06",
-                title: "Launch & Monitoring",
+                title: "Lansare și monitorizare",
                 you: [
                   "Lansare pe domeniul final.",
                   "Setare redirect‑uri (dacă migrezi de pe un site vechi).",

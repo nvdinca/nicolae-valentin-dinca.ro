@@ -15,7 +15,7 @@ export default function NotFound() {
               Pagina nu există, dar proiectul tău poate.
             </h1>
             <p className="text-lg leading-relaxed text-foreground/80">
-              Linkul pe care l-ai accesat nu este valid sau pagina a fost mutată.
+              Linkul pe care l‑ai accesat nu este valid sau pagina a fost mutată.
               Dacă vrei să discutăm despre un proiect sau să vezi ce fac, ai
               variantele de mai jos.
             </p>
@@ -24,7 +24,7 @@ export default function NotFound() {
                 href="/"
                 className="inline-flex items-center justify-center rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:bg-foreground/90 transition-colors"
               >
-                Înapoi la homepage
+                Înapoi la pagina principală
               </Link>
               <Link
                 href="/contact"

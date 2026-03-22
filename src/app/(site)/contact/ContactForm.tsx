@@ -87,7 +87,7 @@ export function ContactForm() {
         <input
           required
           name="business"
-          placeholder="Ex: Agent independent / Agenție / Developer"
+          placeholder="Ex.: agent independent / agenție / dezvoltator"
           className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 text-sm outline-none focus:border-foreground/30"
         />
       </label>

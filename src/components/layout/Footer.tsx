@@ -27,7 +27,7 @@ export function Footer() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <SocialLinks />
             <p className="text-foreground/60">
-              Luxury Real Estate • Full‑Stack Custom Web Development
+              Luxury Imobiliare • dezvoltare web full‑stack la comandă
             </p>
           </div>
         </div>

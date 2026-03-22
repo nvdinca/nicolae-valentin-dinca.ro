@@ -6,9 +6,9 @@ import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
   title:
-    "Platforme digitale custom pentru real estate de lux | Nicolae-Valentin Dincă",
+    "Platforme digitale custom pentru imobiliare de lux | Nicolae-Valentin Dincă",
   description:
-    "Luxury Real Estate Full‑Stack Web Developer: site‑uri și platforme care poziționează agenți, agenții și developeri în liga premium. Design cinematic, arhitectură full‑stack, conversie.",
+    "Luxury Imobiliare Full‑Stack Custom Web Developer: site‑uri și platforme care poziționează agenți, agențiile și dezvoltatorii în liga premium. Design cinematic, arhitectură full‑stack, conversie.",
 };
 
 const homeProjects = projects.slice(0, 3);
@@ -20,15 +20,15 @@ export default function Home() {
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm tracking-[0.2em] text-foreground/60">
-              LUXURY REAL ESTATE • DIGITAL PLATFORMS
+              IMOBILIARE DE LUX • PLATFORME DIGITALE
             </p>
             <h1 className="mt-6 font-serif text-4xl leading-tight tracking-tight md:text-6xl">
-              Platforme digitale custom pentru real estate de lux.
+              Platforme digitale custom pentru imobiliare de lux.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">
-              Sunt Luxury Real Estate Full‑Stack Web Developer și construiesc
-              site‑uri și platforme care poziționează agenți, agenții și
-              developeri acolo unde le este locul: în liga premium.
+              Sunt Luxury Imobiliare Full‑Stack Custom Web Developer și construiesc
+              site‑uri și platforme care poziționează agenți, agențiile și
+              dezvoltatorii acolo unde le este locul: în liga premium.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -57,7 +57,7 @@ export default function Home() {
           <ul className="mt-8 max-w-3xl space-y-4 text-foreground/85 leading-relaxed">
             <li className="flex gap-3">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              Agenți independenți de real estate de lux.
+              Agenți independenți de imobiliare de lux.
             </li>
             <li className="flex gap-3">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -65,7 +65,7 @@ export default function Home() {
             </li>
             <li className="flex gap-3">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              Developeri și proiecte rezidențiale high‑end.
+              Dezvoltatori și proiecte rezidențiale high‑end.
             </li>
           </ul>
         </Container>
@@ -114,8 +114,8 @@ export default function Home() {
             Proiecte selectate
           </h2>
           <p className="mt-4 max-w-2xl text-foreground/80 leading-relaxed">
-            Câteva exemple de platforme digitale pentru agenți, agenții și
-            developeri din segmentul premium.
+            Câteva exemple de platforme digitale pentru agenți, agențiile și
+            dezvoltatorii din segmentul premium.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {homeProjects.map((project) => (
@@ -162,7 +162,7 @@ export default function Home() {
                   codul care susține performanța în producție.
                 </p>
                 <p>
-                  Mă concentrez pe real estate de lux pentru că aici detaliile
+                  Mă concentrez pe imobiliare de lux pentru că aici detaliile
                   contează la fel de mult ca în arhitectură: spațiu, ritm,
                   încredere.
                 </p>
@@ -192,19 +192,19 @@ export default function Home() {
             {[
               {
                 step: "1",
-                title: "Discovery & Strategy",
+                title: "Descoperire și strategie",
                 text:
                   "Clarificăm piața, poziționarea și obiectivele platformei tale digitale.",
               },
               {
                 step: "2",
-                title: "Architecture & Design",
+                title: "Arhitectură și design",
                 text:
                   "Stabilim structura, UX‑ul și designul cinematic, aliniate cu brandul tău.",
               },
               {
                 step: "3",
-                title: "Build & Launch",
+                title: "Construcție și lansare",
                 text:
                   "Dezvolt full‑stack platforma, testăm performanța și o lansăm cu monitorizare.",
               },
@@ -246,7 +246,7 @@ export default function Home() {
               </p>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/80">
                 <li>vinzi sau proiectezi proprietăți de lux și îți pasă de poziționare.</li>
-                <li>vezi site-ul ca investiție în brand, nu ca cheltuială de bifat.</li>
+                <li>vezi site‑ul ca investiție în brand, nu ca cheltuială de bifat.</li>
                 <li>ești dispus să îți aloci timp pentru feedback și clarificări.</li>
                 <li>vrei un partener tehnic implicat, nu un executant la comandă.</li>
               </ul>
@@ -293,7 +293,7 @@ export default function Home() {
               {
                 quote:
                   "Rezultatul final arată exact așa cum îmi doream să arăt ca brand, dar nu știam să formulez.",
-                name: "Developer rezidențial",
+                name: "Dezvoltator rezidențial",
                 place: "Segment high‑end",
               },
             ].map((t) => (

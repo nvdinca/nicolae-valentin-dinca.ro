@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Politică de confidențialitate & cookies",
   description:
-    "Informații despre modul în care sunt prelucrate datele și cum sunt folosite cookie-urile pe nicolae-valentin-dinca.ro.",
+    "Informații despre modul în care sunt prelucrate datele și cum sunt folosite cookie‑urile pe nicolae-valentin-dinca.ro.",
 };
 
 export default function PrivacyPage() {
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
     <>
       <Section>
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Confidențialitate" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Confidențialitate" }]} />
           <div className="max-w-3xl space-y-6">
             <h1 className="font-serif text-4xl tracking-tight md:text-5xl">
               Politică de confidențialitate & cookies
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
             <p className="text-sm leading-relaxed text-foreground/80">
               Această pagină explică pe scurt ce tipuri de date sunt colectate
               când folosești nicolae-valentin-dinca.ro și cum sunt folosite
-              cookie-urile pe acest site.
+              cookie‑urile pe acest site.
             </p>
 
             <section className="space-y-3 text-sm leading-relaxed text-foreground/80">
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
                 1. Cine este responsabil pentru acest site
               </h2>
               <p>
-                Site-ul nicolae-valentin-dinca.ro este operat de Nicolae-Valentin Dincă, developer full‑stack specializat în platforme
+                Site‑ul nicolae-valentin-dinca.ro este operat de Nicolae-Valentin Dincă, dezvoltator full‑stack specializat în platforme
                 digitale pentru imobiliare de lux.
               </p>
             </section>
@@ -55,8 +55,8 @@ export default function PrivacyPage() {
                 3. Cookie-uri folosite pe acest site
               </h2>
               <p>
-                Acest site nu folosește cookie-uri de analytics sau de
-                urmărire. Doar cookie-urile strict necesare pentru
+                Acest site nu folosește cookie‑uri de analytics sau de
+                urmărire. Doar cookie‑urile strict necesare pentru
                 funcționarea tehnică (dacă sunt folosite de platforma de
                 hosting) pot fi setate; acestea nu identifică utilizatorii în
                 mod individual.

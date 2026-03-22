@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Ce înseamnă „platformă digitală” în cazul tău?",
-    a: "O platformă digitală este site-ul tău plus tot ce îl face util și coerent: identitate vizuală (culori, tipografie, ton), structură clară pentru servicii sau liste de proprietăți, formulare de contact sau lead-uri, eventual integrări (ex. calendar, CRM). Nu vând template-uri: fiecare proiect este construit pe măsură, astfel încât să reflecte poziționarea ta și să susțină businessul tău.",
+    a: "O platformă digitală este site‑ul tău plus tot ce îl face util și coerent: identitate vizuală (culori, tipografie, ton), structură clară pentru servicii sau liste de proprietăți, formulare de contact sau leaduri, eventual integrări (ex. calendar, CRM). Nu vând șabloane gata făcute: fiecare proiect este construit pe măsură, astfel încât să reflecte poziționarea ta și să susțină businessul tău.",
   },
   {
     q: "În ce interval de buget lucrezi?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Lucrezi doar cu clienți din imobiliare?",
-    a: "Da. Mă specializez în agenți imobiliari, agenții imobiliare și dezvoltatori imobiliari din segmentul de lux / premium. Experiența mea și oferta (The Luxury Agent Digital Identity™) sunt construite în jurul acestor profiluri, iar proiectele le desfășor doar în România.",
+    a: "Da. Mă specializez în agenți imobiliari, agențiile imobiliare și dezvoltatori imobiliari din segmentul de lux / premium. Experiența mea și oferta (The Luxury Agent Digital Identity™) sunt construite în jurul acestor profiluri, iar proiectele le desfășor doar în România.",
   },
   {
     q: "Ce primește clientul la final?",
@@ -68,7 +68,7 @@ export default function FaqPage() {
       <FaqSchema />
       <Section className="py-20 md:py-28">
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "FAQ" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "FAQ" }]} />
           <div className="max-w-3xl">
             <p className="text-sm tracking-[0.2em] text-foreground/60">
               ÎNTREBĂRI FRECVENTE
@@ -105,7 +105,7 @@ export default function FaqPage() {
 
           <div className="mt-14 max-w-3xl">
             <p className="text-foreground/70">
-              Nu ai găsit răspunsul? Scrie-mi direct prin formularul de contact
+              Nu ai găsit răspunsul? Scrie‑mi direct prin formularul de contact
               sau pe WhatsApp – răspund la toate mesajele.
             </p>
             <div className="mt-6">

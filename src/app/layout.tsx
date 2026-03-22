@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     template: "%s | Nicolae-Valentin Dincă",
   },
   description:
-    "Luxury Imobiliare Full-Stack Custom Web Developer. Platforme digitale custom pentru agenți, agenții și developeri din imobiliare de lux.",
+    "Luxury Imobiliare Full‑Stack Custom Web Developer. Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux.",
   metadataBase: new URL("https://nicolae-valentin-dinca.ro"),
   openGraph: {
     title: "Nicolae-Valentin Dincă",
     description:
-      "Platforme digitale custom pentru imobiliare de lux, construite cap‑coadă de un developer full‑stack specializat.",
+      "Platforme digitale custom pentru imobiliare de lux, construite cap‑coadă de un dezvoltator full‑stack specializat.",
     url: "/",
     siteName: "Nicolae-Valentin Dincă",
     locale: "ro_RO",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nicolae-Valentin Dincă",
     description:
-      "Platforme digitale custom pentru imobiliare de lux, construite cap‑coadă de un developer full‑stack specializat.",
+      "Platforme digitale custom pentru imobiliare de lux, construite cap‑coadă de un dezvoltator full‑stack specializat.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -73,7 +73,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Nicolae-Valentin Dincă",
-    jobTitle: "Luxury Imobiliare Full-Stack Custom Web Developer",
+    jobTitle: "Luxury Imobiliare Full‑Stack Custom Web Developer",
     url: "https://nicolae-valentin-dinca.ro",
     sameAs: sameAsUrls.filter((url) => !url.includes("TAI_")),
   };

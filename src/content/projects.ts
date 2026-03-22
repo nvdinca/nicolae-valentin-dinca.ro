@@ -20,7 +20,7 @@ export const projects: Project[] = [
       "Să iasă clar din zona de „încă un agent” și să explice poziționarea pe penthouse-uri și vile.",
     ],
     solution: [
-      "Homepage cinematic, cu mesaj clar despre tipul de proprietăți și modul de lucru.",
+      "Pagină principală cinematică, cu mesaj clar despre tipul de proprietăți și modul de lucru.",
       "Structură simplă de pagini, cu accent pe listări reprezentative și procesul de lucru.",
       "Formulare și micro‑CTA‑uri gândite să descurajeze leadurile foarte slabe.",
     ],
@@ -44,21 +44,21 @@ export const projects: Project[] = [
       "Șabloane ușor de actualizat intern, fără să sacrifice estetica.",
     ],
     results: [
-      "Agenția este percepută ca „the go‑to” pentru proprietăți istorice în zonă.",
+      "Agenția este percepută ca referința pentru proprietăți istorice în zonă.",
     ],
   },
   {
     slug: "developer-proiect-ultra-premium",
     title:
       "Platformă de prezentare pentru un dezvoltator cu un singur proiect ultra‑premium",
-    clientType: "Developer",
+    clientType: "Dezvoltator",
     market: "Piață internațională, segment ultra‑premium",
     goals: [
       "Să vândă povestea și viziunea proiectului, nu doar specificațiile tehnice.",
       "Să creeze un funnel clar de la interes inițial la discuții 1‑la‑1 cu echipa de vânzări.",
     ],
     solution: [
-      "Site construit ca un experience digital, cu secțiuni pentru viziune, arhitectură și lifestyle.",
+      "Site construit ca o experiență digitală, cu secțiuni pentru viziune, arhitectură și lifestyle.",
       "Integrare video cinematic și imagini fullscreen pentru a susține poziționarea de preț.",
       "Formular scurt + legătură directă către WhatsApp pentru discuții rapide cu echipa.",
     ],

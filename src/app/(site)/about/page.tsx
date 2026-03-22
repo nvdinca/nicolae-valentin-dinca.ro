@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Despre | Nicolae-Valentin Dincă",
   description:
-    "Luxury Real Estate Full‑Stack Web Developer: de la site-uri generice la platforme digitale custom pentru agenți, agenții și developeri de lux.",
+    "Luxury Imobiliare Full‑Stack Custom Web Developer: de la site‑uri generice la platforme digitale custom pentru agenți, agențiile și dezvoltatorii de lux.",
 };
 
 export default function AboutPage() {
@@ -15,14 +15,14 @@ export default function AboutPage() {
     <>
       <Section>
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Despre" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Despre" }]} />
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl tracking-tight md:text-5xl">
               Despre
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-              Sunt Luxury Real Estate Full‑Stack Web Developer și ajut agenți,
-              agenții și developeri de real estate de lux să treacă de la
+              Sunt Luxury Imobiliare Full‑Stack Custom Web Developer și ajut agenți,
+              agențiile și dezvoltatorii de imobiliare de lux să treacă de la
               site‑uri generice la platforme digitale custom, construite cap‑coadă.
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
             </p>
             <p>
               Timpul m-a dus spre proiecte unde imaginea și încrederea contează
-              la fel de mult ca funcționalitatea — iar în real estate de lux,
+              la fel de mult ca funcționalitatea — iar în imobiliare de lux,
               aceste două lucruri se întâlnesc în fiecare listare.
             </p>
             <p>

@@ -15,7 +15,7 @@ export default function ContactPage() {
     <>
       <Section>
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Contact" }]} />
           <div className="grid gap-12 md:grid-cols-2 md:items-start">
             <div>
               <h1 className="font-serif text-4xl tracking-tight md:text-5xl">

@@ -15,7 +15,7 @@ export default function TermeniPage() {
     <>
       <Section>
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Termeni și condiții" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Termeni și condiții" }]} />
           <div className="max-w-3xl space-y-8">
             <div>
               <h1 className="font-serif text-4xl tracking-tight md:text-5xl">
@@ -24,7 +24,7 @@ export default function TermeniPage() {
               <p className="mt-4 text-sm leading-relaxed text-foreground/80">
                 Acești termeni și condiții reglementează colaborarea pentru
                 serviciile de dezvoltare web și platforme digitale oferite prin
-                nicolae-valentin-dinca.ro. Utilizarea site-ului și angajarea
+                nicolae-valentin-dinca.ro. Utilizarea site‑ului și angajarea
                 serviciilor implică acceptarea acestor termeni.
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function TermeniPage() {
               </h2>
               <p>
                 Serviciile pot include, în funcție de ofertă: conceperea și
-                dezvoltarea de site-uri web și platforme digitale la comandă,
+                dezvoltarea de site‑uri web și platforme digitale la comandă,
                 identitate vizuală și branding digital, integrări tehnice,
                 găzduire și mentenanță (dacă este prevăzut în contract). Scope-ul
                 exact, livrabilele și etapele sunt descrise în oferta acceptată
@@ -129,7 +129,7 @@ export default function TermeniPage() {
                 Părțile se angajează să păstreze confidențialitatea informațiilor
                 primite în legătură cu proiectul și cu relația contractuală.
                 Prelucrarea datelor cu caracter personal este realizată conform
-                politicii de confidențialitate a site-ului și cu legislația
+                politicii de confidențialitate a site‑ului și cu legislația
                 aplicabilă (GDPR). Detalii în{" "}
                 <Link
                   href="/privacy"

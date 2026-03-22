@@ -16,16 +16,16 @@ const serviceSchema = {
     "@type": "Person",
     name: "Nicolae-Valentin Dincă",
     url: "https://nicolae-valentin-dinca.ro",
-    jobTitle: "Luxury Imobiliare Full-Stack Custom Web Developer",
+    jobTitle: "Luxury Imobiliare Full‑Stack Custom Web Developer",
   },
   areaServed: {
     "@type": "Country",
     name: "Romania",
   },
   serviceType: [
-    "Web development",
-    "Digital identity design",
-    "Luxury real estate marketing",
+    "Dezvoltare web",
+    "Design identitate digitală",
+    "Marketing imobiliar de lux",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -42,7 +42,7 @@ const serviceSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Pentru agenții imobiliare",
+          name: "Pentru agențiile imobiliare",
         },
       },
       {
@@ -74,17 +74,17 @@ export default function ServicesPage() {
       </Script>
       <Section className="py-20 md:py-28">
         <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Servicii" }]} />
+          <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Servicii" }]} />
           <div className="max-w-3xl">
             <p className="text-sm tracking-[0.2em] text-foreground/60">
-              SIGNATURE OFFER
+              OFERTĂ SEMNĂTURĂ
             </p>
             <h1 className="mt-6 font-serif text-4xl leading-tight tracking-tight md:text-6xl">
               The Luxury Agent Digital Identity™
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">
               O experiență completă de brand digital și website custom, creată
-              pentru agenți, echipe și agenții de real estate de lux care vor
+              pentru agenți, echipe și agențiile de imobiliare de lux care vor
               mai mult decât „un simplu site”.
             </p>
             <p className="mt-4 text-sm font-medium tracking-wide text-foreground/70">
@@ -274,7 +274,7 @@ export default function ServicesPage() {
                 subtitle:
                   "„Un website cinematic, care arată și funcționează ca un listing de milioane.”",
                 bullets: [
-                  "Homepage custom cu hero cinematic și mesaj clar",
+                  "Pagină principală personalizată, cu hero cinematic și mesaj clar",
                   "Pagini pentru proprietăți / proiecte, cu galerii foto și video de înaltă calitate",
                   "Animații fine și micro‑interacțiuni care dau senzație de fluiditate și grijă la detalii",
                   "Integrare cu sisteme de listări / MLS / CRM (acolo unde este relevant pentru piața ta)",
@@ -362,12 +362,12 @@ export default function ServicesPage() {
               {
                 title: "Pentru agenți imobiliari",
                 text:
-                  "Majoritatea proiectelor The Luxury Agent Digital Identity™ pentru agenți independenți de real estate de lux încep de la aproximativ 3.000–5.000 €, în funcție de complexitate și de numărul de pagini.",
+                  "Majoritatea proiectelor The Luxury Agent Digital Identity™ pentru agenți independenți de imobiliare de lux încep de la aproximativ 3.000–5.000 €, în funcție de complexitate și de numărul de pagini.",
               },
               {
                 title: "Pentru agențiile imobiliare",
                 text:
-                  "Pentru agenții și echipe boutique, proiectele încep de obicei de la 5.000–8.000 €, în funcție de structură (multi‑agent), conținut și integrarea cu instrumentele pe care le folosești deja.",
+                  "Pentru agențiile și echipele boutique, proiectele încep de obicei de la 5.000–8.000 €, în funcție de structură (multi‑agent), conținut și integrarea cu instrumentele pe care le folosești deja.",
               },
               {
                 title: "Pentru dezvoltatori imobiliari",

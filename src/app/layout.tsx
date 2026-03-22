@@ -6,7 +6,9 @@ import { Footer } from "@/components/layout/Footer";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
 import { AccessibilityButton } from "@/components/shared/AccessibilityButton";
+import { MainContent } from "@/components/layout/MainContent";
 import { SITE_JOB_TITLE } from "@/lib/brand";
+import { SITE_ORIGIN } from "@/lib/site";
 import { sameAsUrls } from "@/lib/social";
 import Script from "next/script";
 
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Nicolae-Valentin Dincă",
   },
   description: `${SITE_JOB_TITLE}. Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux.`,
-  metadataBase: new URL("https://nicolae-valentin-dinca.ro"),
+  metadataBase: new URL(SITE_ORIGIN),
   openGraph: {
     title: "Nicolae-Valentin Dincă",
     description:
@@ -74,22 +76,40 @@ export default function RootLayout({
     "@type": "Person",
     name: "Nicolae-Valentin Dincă",
     jobTitle: SITE_JOB_TITLE,
-    url: "https://nicolae-valentin-dinca.ro",
+    url: SITE_ORIGIN,
     sameAs: sameAsUrls.filter((url) => !url.includes("TAI_")),
+  };
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Nicolae-Valentin Dincă — platforme digitale pentru imobiliare de lux",
+    url: `${SITE_ORIGIN}/services`,
+    description:
+      "Ofertă semnătură The Luxury Agent Digital Identity™: brand digital, website și platformă custom pentru agenți, agențiile și dezvoltatori imobiliari.",
+    areaServed: {
+      "@type": "Country",
+      name: "România",
+    },
+    provider: {
+      "@type": "Person",
+      name: "Nicolae-Valentin Dincă",
+      url: SITE_ORIGIN,
+    },
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Nicolae-Valentin Dincă",
-    url: "https://nicolae-valentin-dinca.ro",
+    url: SITE_ORIGIN,
     description:
       "Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux. Dezvoltare web full‑stack și identitate digitală.",
     inLanguage: "ro-RO",
     publisher: {
       "@type": "Person",
       name: "Nicolae-Valentin Dincă",
-      url: "https://nicolae-valentin-dinca.ro",
+      url: SITE_ORIGIN,
     },
   };
 
@@ -121,6 +141,13 @@ export default function RootLayout({
         >
           {JSON.stringify(websiteSchema)}
         </Script>
+        <Script
+          id="schema-org-professional-service"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify(professionalServiceSchema)}
+        </Script>
         <AppProviders>
           <div
             className="min-h-screen bg-background text-foreground"
@@ -133,7 +160,7 @@ export default function RootLayout({
               Sari la conținut
             </a>
             <Header />
-            <main id="main">{children}</main>
+            <MainContent>{children}</MainContent>
             <Footer />
             <AccessibilityButton />
             <ScrollToTop />

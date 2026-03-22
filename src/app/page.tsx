@@ -128,7 +128,12 @@ export default function Home() {
                   {project.clientType} • {project.market}
                 </p>
                 <h3 className="mt-3 font-serif text-lg leading-snug tracking-tight">
-                  {project.title}
+                  <Link
+                    href={`/work/${project.slug}`}
+                    className="transition-colors hover:text-foreground/90"
+                  >
+                    {project.title}
+                  </Link>
                 </h3>
                 <ul className="mt-4 flex-1 list-disc space-y-1.5 pl-4 text-sm text-foreground/80">
                   <li>{project.goals[0]}</li>

@@ -1,7 +1,8 @@
- "use client";
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { Container } from "./Container";
 
 const nav = [
@@ -37,6 +38,7 @@ export function Header() {
           <Link
             href="/contact"
             className="rounded-full bg-foreground px-4 py-2 text-sm text-background hover:bg-foreground/90 transition-colors"
+            onClick={() => trackEvent("Header Apply Click")}
           >
             Aplică
           </Link>
@@ -70,7 +72,10 @@ export function Header() {
             <Link
               href="/contact"
               className="mt-1 inline-flex items-center justify-center rounded-full bg-foreground px-4 py-2 text-sm text-background hover:bg-foreground/90"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                trackEvent("Header Apply Click");
+                setOpen(false);
+              }}
             >
               Aplică
             </Link>

@@ -36,8 +36,13 @@ export default function WorkPage() {
               >
                 <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
                   <div>
-                    <p className="font-medium">{project.title}</p>
-                    <p className="text-foreground/60">
+                    <Link
+                      href={`/work/${project.slug}`}
+                      className="font-medium text-foreground underline decoration-foreground/25 underline-offset-2 transition-colors hover:decoration-foreground/50"
+                    >
+                      {project.title}
+                    </Link>
+                    <p className="mt-1 text-foreground/60">
                       {project.clientType} • {project.market}
                     </p>
                   </div>
@@ -81,6 +86,15 @@ export default function WorkPage() {
                     </ul>
                   </div>
                 )}
+
+                <div className="mt-6">
+                  <Link
+                    href={`/work/${project.slug}`}
+                    className="text-sm font-medium text-foreground underline-offset-4 transition-colors hover:underline"
+                  >
+                    Vezi studiul de caz complet →
+                  </Link>
+                </div>
               </article>
             ))}
           </div>

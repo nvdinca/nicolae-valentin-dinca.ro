@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/shared/Section";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { CookiePreferencesTrigger } from "@/components/cookie-consent/CookiePreferencesTrigger";
+import { POLICY_LAST_UPDATED } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Politică de confidențialitate & cookies",
@@ -22,6 +23,9 @@ export default function PrivacyPage() {
               <h1 className="font-serif text-4xl tracking-tight md:text-5xl">
                 Politică de confidențialitate & cookies
               </h1>
+              <p className="text-xs text-foreground/55">
+                Ultima actualizare: {POLICY_LAST_UPDATED}
+              </p>
               <p className="text-sm leading-relaxed text-foreground/80">
                 Această pagină descrie modul în care sunt prelucrate datele cu
                 caracter personal când folosești nicolae-valentin-dinca.ro și cum

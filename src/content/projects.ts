@@ -68,3 +68,9 @@ export const projects: Project[] = [
   },
 ];
 
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((p) => p.slug === slug);
+}
+
+export const projectSlugs: string[] = projects.map((p) => p.slug);
+

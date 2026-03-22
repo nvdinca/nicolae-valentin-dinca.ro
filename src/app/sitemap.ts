@@ -1,65 +1,73 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://nicolae-valentin-dinca.ro";
+import { projects } from "@/content/projects";
+import { SITE_ORIGIN } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
 
-  return [
+  const staticEntries: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL + "/",
+      url: SITE_ORIGIN + "/",
       lastModified: now,
-      changeFrequency: "weekly" as const,
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: BASE_URL + "/about",
+      url: SITE_ORIGIN + "/about",
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: BASE_URL + "/services",
+      url: SITE_ORIGIN + "/services",
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: BASE_URL + "/work",
+      url: SITE_ORIGIN + "/work",
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: BASE_URL + "/process",
+      url: SITE_ORIGIN + "/process",
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: BASE_URL + "/faq",
+      url: SITE_ORIGIN + "/faq",
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: BASE_URL + "/contact",
+      url: SITE_ORIGIN + "/contact",
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: BASE_URL + "/privacy",
+      url: SITE_ORIGIN + "/privacy",
       lastModified: now,
-      changeFrequency: "yearly" as const,
+      changeFrequency: "yearly",
       priority: 0.4,
     },
     {
-      url: BASE_URL + "/termeni",
+      url: SITE_ORIGIN + "/termeni",
       lastModified: now,
-      changeFrequency: "yearly" as const,
+      changeFrequency: "yearly",
       priority: 0.4,
     },
   ];
-}
 
+  const workProjectEntries: MetadataRoute.Sitemap = projects.map((p) => ({
+    url: `${SITE_ORIGIN}/work/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  return [...staticEntries, ...workProjectEntries];
+}

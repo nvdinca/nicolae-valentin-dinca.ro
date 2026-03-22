@@ -13,6 +13,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
     "siteplan:pdf": "node scripts/generate-siteplan-pdfs.cjs",
     "favicon": "node scripts/generate-favicon.cjs",
     "preview": "npm run build && opennextjs-cloudflare preview",
@@ -39,6 +41,7 @@
     "sharp": "^0.33.5",
     "tailwindcss": "^4",
     "typescript": "^5",
+    "vitest": "^3.2.4",
     "wrangler": "^4.76.0"
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -50,6 +51,7 @@ export function ContactForm() {
     const message = encodeURIComponent(lines.join("\n"));
     const url = `https://wa.me/40784493923?text=${message}`;
 
+    trackEvent("Contact Form Submit");
     window.location.href = url;
   }
 

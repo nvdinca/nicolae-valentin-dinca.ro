@@ -15,3 +15,6 @@ export const SITE_INTRO_I_AM =
 /** Subtitlu scurt: footer, imagine OG. */
 export const SITE_SHORT_TAGLINE =
   "Imobiliare de lux • dezvoltare web la comandă";
+
+/** Data ultimei revizuiri a politicii de confidențialitate (afișată pe /privacy). */
+export const POLICY_LAST_UPDATED = "2025-03-22";

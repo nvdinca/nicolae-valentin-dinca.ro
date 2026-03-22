@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/shared/Section";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { SITE_ORIGIN } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
+
+const contactPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact — Nicolae-Valentin Dincă",
+  url: `${SITE_ORIGIN}/contact`,
+  inLanguage: "ro-RO",
+  mainEntity: {
+    "@type": "Organization",
+    name: "Nicolae-Valentin Dincă",
+    url: SITE_ORIGIN,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      availableLanguage: ["Romanian", "English"],
+      url: `${SITE_ORIGIN}/contact`,
+    },
+  },
+};
 
 export const metadata: Metadata = {
   title: "Contact | Aplică pentru un proiect",
@@ -13,6 +34,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <Script
+        id="contact-page-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactPageJsonLd),
+        }}
+      />
       <Section>
         <Container>
           <Breadcrumbs items={[{ label: "Acasă", href: "/" }, { label: "Contact" }]} />

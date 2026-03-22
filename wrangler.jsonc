@@ -1,7 +1,6 @@
-// Cloudflare Workers / Pages: prefer `npm run deploy` (opennextjs-cloudflare build + deploy).
-// Bare `npx wrangler deploy` can trigger first-time setup that conflicts with a committed wrangler.jsonc.
-// Worker name must match package.json "name" after sanitization (no dots in npm name — use hyphens).
 {
+	// No services.WORKER_SELF_REFERENCE: not needed for a static/prerendered site; avoids deploy error 10143 if
+	// Worker names disagree. For ISR + R2 cache, add the binding per https://opennext.js.org/cloudflare/caching
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",
 	"name": "nicolae-valentin-dinca-ro",
@@ -14,14 +13,6 @@
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
 	},
-	"services": [
-		{
-			// Self-reference service binding, the service name must match the worker name
-			// see https://opennext.js.org/cloudflare/caching
-			"binding": "WORKER_SELF_REFERENCE",
-			"service": "nicolae-valentin-dinca-ro"
-		}
-	],
 	"images": {
 		// Enable image optimization
 		// see https://opennext.js.org/cloudflare/howtos/image

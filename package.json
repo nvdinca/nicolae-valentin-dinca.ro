@@ -2,11 +2,17 @@
   "name": "nicolae-valentin-dinca.ro",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "siteplan:pdf": "node scripts/generate-siteplan-pdfs.cjs",
+    "favicon": "node scripts/generate-favicon.cjs"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -20,6 +26,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "md-to-pdf": "^5.2.5",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.33.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

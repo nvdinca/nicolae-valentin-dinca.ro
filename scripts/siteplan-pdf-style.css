@@ -1,0 +1,135 @@
+/* Luxury PDF styling – aliniat cu site-ul (Quiet Luxury Digital) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --obsidian: #0c0c0c;
+  --ivory: #f8f5f0;
+  --champagne: #d7c7a3;
+  --warm-gray: #b8b2a9;
+  --forest: #0f2a23;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: var(--obsidian);
+  background: var(--ivory);
+  margin: 0;
+  padding: 2rem 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  color: var(--obsidian);
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+  page-break-after: avoid;
+}
+
+h1 { font-size: 1.75rem; margin-top: 0; border-bottom: 1px solid var(--champagne); padding-bottom: 0.5rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+p {
+  margin: 0.6em 0;
+  color: rgba(12, 12, 12, 0.85);
+}
+
+ul, ol {
+  margin: 0.6em 0;
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 0.35em 0;
+}
+
+a {
+  color: var(--forest);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--warm-gray);
+  margin: 1.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 10pt;
+  page-break-inside: avoid;
+}
+
+th, td {
+  border: 1px solid var(--warm-gray);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--ivory) 85%, var(--warm-gray));
+  color: var(--obsidian);
+}
+
+tr:nth-child(even) {
+  background: color-mix(in srgb, var(--ivory) 92%, var(--warm-gray));
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--champagne);
+  color: rgba(12, 12, 12, 0.75);
+  font-style: italic;
+}
+
+code {
+  font-size: 0.9em;
+  background: color-mix(in srgb, var(--obsidian) 8%, var(--ivory));
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--obsidian) 10%, var(--ivory));
+  border-radius: 6px;
+  font-size: 9pt;
+  page-break-inside: avoid;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--obsidian);
+}
+
+/* Optional: small accent for first paragraph or intro */
+body > :first-child {
+  margin-top: 0;
+}
+
+@page {
+  size: A4;
+  margin: 2cm;
+}

@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## nicolae-valentin-dinca.ro – proiect Next.js
 
-## Getting Started
+Site personal pentru un Luxury Real Estate Full‑Stack Web Developer, construit cu Next.js (App Router), TypeScript și Tailwind CSS 4.
 
-First, run the development server:
+## Rulare / comenzi de bază
+
+Instalare dependențe:
+
+```bash
+npm install
+```
+
+Development:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Dacă vezi „Unable to acquire lock” sau „Connection refused”, șterge cache-ul și repornește: `Remove-Item -Recurse -Force .next` (PowerShell), apoi `npm run dev`. Deschide în browser adresa afișată în terminal (ex. http://localhost:3000 sau http://localhost:3001).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build de producție:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Server de producție (după build):
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Generare PDF din documentele siteplan (stil luxury, în `pdf/`):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run siteplan:pdf
+```
 
-## Deploy on Vercel
+## Structură (pe scurt)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/app` – paginile principale (Home, About, Work, Services, Process, Contact) + `not-found`, `sitemap`, `robots`, `opengraph-image`, API Contact.
+- `src/components` – layout (Header, Footer, Container), shared (Section), analytics (WebVitalsReporter).
+- `src/content/projects.ts` – date pentru proiecte (portofoliu).
+- `siteplan/` – planuri de conținut, structură și identitate de brand (documentație).
+- `contract/` – model de contract (cesiune drepturi de autor software).
+- `scripts/` – script pentru generare PDF din siteplan (`npm run siteplan:pdf` → `pdf/`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Cum adaugi un proiect nou în Work
+
+1. Deschide `src/content/projects.ts`.
+2. Adaugă un nou obiect în array-ul `projects`, de forma:
+
+```ts
+projects.push({
+  slug: "exemplu-proiect",
+  title: "Titlu proiect",
+  clientType: "Agent independent / Agenție / Developer",
+  market: "Oraș, țară",
+  goals: ["Obiectiv 1", "Obiectiv 2"],
+  solution: ["Soluție 1", "Soluție 2"],
+  results: ["Rezultat 1", "Rezultat 2"], // opțional
+});
+```
+
+Pagina `Work` va afișa automat proiectul pe baza acestor date.
+
+## Linkuri rețele sociale (LinkedIn, GitHub, etc.)
+
+Editează **`src/lib/social.ts`**: înlocuiește `TAI_PROFILUL_LINKEDIN` și `TAI_USERNAME_GITHUB` cu username-urile tale reale. Poți adăuga și alte rețele (ex. X/Twitter) după modelul din comentarii. Linkurile apar în **Footer** (cu icoane) și în **schema SEO** (Person, pentru Google).
+
+## Cum modifici conținutul (copy)
+
+- Pagini principale:
+  - Home: `src/app/page.tsx`
+  - About: `src/app/(site)/about/page.tsx`
+  - Work: `src/app/(site)/work/page.tsx`
+  - Services: `src/app/(site)/services/page.tsx`
+  - Process: `src/app/(site)/process/page.tsx`
+  - Contact: `src/app/(site)/contact/page.tsx` + `ContactForm.tsx`
+- Ghiduri și structuri de conținut: fișierele din `siteplan/`.
+
+## Accesibilitate și UX
+
+- **Skip link:** primul tab pe pagină duce la „Sari la conținut” (vizibil doar la focus).
+- **Manifest PWA:** `public/manifest.json` – permite „Adaugă pe ecran” pe mobile; culori și icon aliniate la brand.
+- **Loading:** la navigarea pe paginile din (site) (About, Work, Services, etc.) se afișează un indicator de încărcare (`src/app/(site)/loading.tsx`). Home (`/`) se încarcă direct, fără loading.
+- **Footer:** link către pagina Confidențialitate (`/privacy`).
+
+## Checklist de mentenanță
+
+Recomandare de verificări periodice:
+
+- **Trimestrial**
+  - Verifică dacă toate linkurile importante funcționează (CTA-uri, Contact, WhatsApp).
+  - Verifică performance-ul de bază (Lighthouse / Core Web Vitals).
+  - Actualizează portofoliul (`projects.ts`) și, dacă e nevoie, textele din Services.
+
+- **Anual**
+  - Actualizează studii de caz și testimoniale cu exemple reale recente.
+  - Revizuiește textele de poziționare (Home, About, Services) în funcție de cum a evoluat serviciul tău.
+
+## Deploy pe Vercel
+
+1. **Conectează repo-ul:** [vercel.com](https://vercel.com) → Import Project → alege repository-ul (GitHub/GitLab/Bitbucket).
+2. **Setări build (de obicei detectate automat):**
+   - **Framework Preset:** Next.js
+   - **Build Command:** `npm run build`
+   - **Output Directory:** (lasă implicit; Vercel detectează Next.js)
+   - **Install Command:** `npm install`
+3. **Variabile de mediu:** nu sunt necesare pentru site-ul actual. Dacă adaugi ulterior (ex. analytics), le configurezi în Project → Settings → Environment Variables.
+4. **Domeniu:** după deploy, în Project → Settings → Domains adaugi `nicolae-valentin-dinca.ro` (sau subdomeniul dorit) și urmezi pașii de verificare DNS.
+5. **HTTPS:** este activat automat de Vercel.
+
+## Înainte de deploy
+
+- **Favicon / icon:** în `public/` sunt deja `icon.png` (pentru Apple touch icon) și `og-image.png` (imagine OG pentru partajare). Pentru `favicon.ico`, adaugă un fișier în `public/favicon.ico` (poți converti `public/icon.png` la .ico cu un [generator online](https://favicon.io)).
+- **WhatsApp:** numărul din formularul de contact este în `src/app/(site)/contact/ContactForm.tsx` (caută `wa.me/`). Schimbă-l dacă e cazul.
+- **Variabile de mediu:** pe Vercel (sau alt host) nu e nevoie de variabile pentru site-ul actual. Dacă adaugi servicii (ex. analytics), setează-le în Environment Variables.
+- **Domeniu:** conectează domeniul în panoul de hosting; HTTPS este activ automat pe Vercel.
+- **După deploy:** verifică partajarea pe social (ex. [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)) și linkul către WhatsApp din Contact.
+
+## Contracte și PDF-uri
+
+- **Model contract:** `contract/model-cesiune-drepturi-autor-software.md` – completabil și exportabil în Word/PDF pentru cesiune drepturi de autor pe software.
+- **PDF siteplan:** după modificări în `siteplan/*.md`, rulează `npm run siteplan:pdf`; fișierele vor fi generate în `pdf/` cu stilul vizual al site-ului.
+

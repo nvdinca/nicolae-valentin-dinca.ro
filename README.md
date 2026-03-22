@@ -18,19 +18,21 @@ npm run dev
 
 Dacă vezi „Unable to acquire lock” sau „Connection refused”, șterge cache-ul și repornește: `Remove-Item -Recurse -Force .next` (PowerShell), apoi `npm run dev`. Deschide în browser adresa afișată în terminal (ex. http://localhost:3000 sau http://localhost:3001).
 
-Build de producție (Next.js standard — folosit și de OpenNext în interiorul `build:cloudflare`):
+Build de producție pentru **Cloudflare Workers** (Next.js + bundle OpenNext; folosit în CI când Build Command este `npm run build`):
 
 ```bash
 npm run build
 ```
 
-Bundle OpenNext pentru **Cloudflare Workers** (rulează `next build`, apoi pachetul Worker; necesar înainte de `wrangler deploy`):
+Doar Next.js, fără pachet Worker (ex. Vercel — vezi `vercel.json`):
 
 ```bash
-npm run build:cloudflare
+npm run build:next
 ```
 
-Server de producție (după `build`):
+(`npm run build:cloudflare` este alias pentru același lucru ca `npm run build`.)
+
+Server de producție (după `build:next` sau după un build Next inclus în OpenNext):
 
 ```bash
 npm start
@@ -119,12 +121,12 @@ Recomandare de verificări periodice:
 
 ## Deploy pe Cloudflare Workers (OpenNext)
 
-În Workers Builds / Pages, comanda de **build** trebuie să producă `.open-next/` (nu e suficient doar `next build`):
+Comanda de **build** trebuie să ruleze OpenNext (generează `.open-next/`), nu doar `next build`. În repo, `npm run build` face deja asta (vezi `buildCommand` în `open-next.config.ts`).
 
-- **Build Command:** `npm run build:cloudflare`
+- **Build Command:** `npm run build` (implicit în multe setup-uri)
 - **Deploy Command:** `npx wrangler deploy` (sau `npx opennextjs-cloudflare deploy`)
 
-Alternativă într-un singur pas: `npm run deploy` (build OpenNext + deploy). Nu seta `npm run build` ca singurul build pentru Workers — vei primi „Could not find compiled Open Next config”.
+Într-un singur pas local: `npm run deploy` (build + deploy). Dacă în Cloudflare ai doar `next build` ca build, vei primi „Could not find compiled Open Next config” — folosește `npm run build` din acest proiect.
 
 ## Înainte de deploy
 

@@ -6,7 +6,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
     "build:next": "next build",
     "build:cloudflare": "opennextjs-cloudflare build",
     "dev": "next dev --webpack",
@@ -15,10 +15,10 @@
     "typecheck": "tsc --noEmit",
     "siteplan:pdf": "node scripts/generate-siteplan-pdfs.cjs",
     "favicon": "node scripts/generate-favicon.cjs",
-    "preview": "npm run build:cloudflare && opennextjs-cloudflare preview",
-    "deploy": "npm run build:cloudflare && opennextjs-cloudflare deploy",
-    "cloudflare:deploy": "npm run build:cloudflare && opennextjs-cloudflare deploy",
-    "upload": "npm run build:cloudflare && opennextjs-cloudflare upload",
+    "preview": "npm run build && opennextjs-cloudflare preview",
+    "deploy": "npm run build && opennextjs-cloudflare deploy",
+    "cloudflare:deploy": "npm run build && opennextjs-cloudflare deploy",
+    "upload": "npm run build && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {

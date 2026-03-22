@@ -9,7 +9,7 @@
     "build": "next build",
     "dev": "next dev --webpack",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "siteplan:pdf": "node scripts/generate-siteplan-pdfs.cjs",
     "favicon": "node scripts/generate-favicon.cjs",

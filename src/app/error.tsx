@@ -5,7 +5,6 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/shared/Section";
 
 export default function Error({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };

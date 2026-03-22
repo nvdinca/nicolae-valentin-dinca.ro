@@ -21,7 +21,9 @@ function getStored(): A11ySettings {
   try {
     const s = localStorage.getItem(STORAGE_KEY);
     if (s) return { ...defaultSettings, ...JSON.parse(s) };
-  } catch (_) {}
+  } catch {
+    /* ignore invalid JSON */
+  }
   return defaultSettings;
 }
 
@@ -38,6 +40,8 @@ export function AccessibilityButton() {
 
   useEffect(() => {
     const s = getStored();
+    // Hydrate from localStorage after mount (required for client-only storage).
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional sync after SSR/hydration
     setSettings(s);
     applySettings(s);
   }, []);
@@ -47,7 +51,9 @@ export function AccessibilityButton() {
     setSettings(next);
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-    } catch (_) {}
+    } catch {
+      /* ignore quota / private mode */
+    }
     applySettings(next);
   }
 

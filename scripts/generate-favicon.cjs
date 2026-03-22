@@ -36,7 +36,9 @@ async function main() {
     fs.writeFileSync(outputPath, buf);
     try {
       fs.unlinkSync(tempSquarePath);
-    } catch (_) {}
+    } catch {
+      /* ignore unlink errors */
+    }
     console.log("Scris public/favicon.ico din public/icon.png.");
   } catch (err) {
     console.error("Eroare la generare favicon:", err.message);

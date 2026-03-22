@@ -18,13 +18,19 @@ npm run dev
 
 Dacă vezi „Unable to acquire lock” sau „Connection refused”, șterge cache-ul și repornește: `Remove-Item -Recurse -Force .next` (PowerShell), apoi `npm run dev`. Deschide în browser adresa afișată în terminal (ex. http://localhost:3000 sau http://localhost:3001).
 
-Build de producție:
+Build de producție (Next.js standard — folosit și de OpenNext în interiorul `build:cloudflare`):
 
 ```bash
 npm run build
 ```
 
-Server de producție (după build):
+Bundle OpenNext pentru **Cloudflare Workers** (rulează `next build`, apoi pachetul Worker; necesar înainte de `wrangler deploy`):
+
+```bash
+npm run build:cloudflare
+```
+
+Server de producție (după `build`):
 
 ```bash
 npm start
@@ -104,12 +110,21 @@ Recomandare de verificări periodice:
 1. **Conectează repo-ul:** [vercel.com](https://vercel.com) → Import Project → alege repository-ul (GitHub/GitLab/Bitbucket).
 2. **Setări build (de obicei detectate automat):**
    - **Framework Preset:** Next.js
-   - **Build Command:** `npm run build`
+   - **Build Command:** `npm run build:next` (vezi `vercel.json`; evită bundle-ul OpenNext pentru Cloudflare)
    - **Output Directory:** (lasă implicit; Vercel detectează Next.js)
    - **Install Command:** `npm install`
 3. **Variabile de mediu:** nu sunt necesare pentru site-ul actual. Dacă adaugi ulterior (ex. analytics), le configurezi în Project → Settings → Environment Variables.
 4. **Domeniu:** după deploy, în Project → Settings → Domains adaugi `nicolae-valentin-dinca.ro` (sau subdomeniul dorit) și urmezi pașii de verificare DNS.
 5. **HTTPS:** este activat automat de Vercel.
+
+## Deploy pe Cloudflare Workers (OpenNext)
+
+În Workers Builds / Pages, comanda de **build** trebuie să producă `.open-next/` (nu e suficient doar `next build`):
+
+- **Build Command:** `npm run build:cloudflare`
+- **Deploy Command:** `npx wrangler deploy` (sau `npx opennextjs-cloudflare deploy`)
+
+Alternativă într-un singur pas: `npm run deploy` (build OpenNext + deploy). Nu seta `npm run build` ca singurul build pentru Workers — vei primi „Could not find compiled Open Next config”.
 
 ## Înainte de deploy
 

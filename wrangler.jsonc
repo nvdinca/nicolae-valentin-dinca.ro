@@ -1,3 +1,6 @@
+// Cloudflare Workers / Pages: prefer `npm run deploy` (opennextjs-cloudflare build + deploy).
+// Bare `npx wrangler deploy` can trigger first-time setup that conflicts with a committed wrangler.jsonc.
+// Worker name must match package.json "name" after sanitization (no dots in npm name — use hyphens).
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"main": ".open-next/worker.js",

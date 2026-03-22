@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { WebVitalsReporter } from "@/components/analytics/WebVitalsReporter";
+import { AppProviders } from "@/components/providers/AppProviders";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
 import { AccessibilityButton } from "@/components/shared/AccessibilityButton";
 import { sameAsUrls } from "@/lib/social";
@@ -84,7 +84,7 @@ export default function RootLayout({
     name: "Nicolae-Valentin Dincă",
     url: "https://nicolae-valentin-dinca.ro",
     description:
-      "Platforme digitale custom pentru agenți, agenții și dezvoltatori din imobiliare de lux. Full‑stack web development și identitate digitală.",
+      "Platforme digitale custom pentru agenți, agențiile și dezvoltatorii din imobiliare de lux. Full‑stack web development și identitate digitală.",
     inLanguage: "ro-RO",
     publisher: {
       "@type": "Person",
@@ -121,23 +121,24 @@ export default function RootLayout({
         >
           {JSON.stringify(websiteSchema)}
         </Script>
-        <div
-          className="min-h-screen bg-background text-foreground"
-          style={{
-            backgroundColor: "var(--background, #f8f5f0)",
-            color: "var(--foreground, #0c0c0c)",
-          }}
-        >
-          <WebVitalsReporter />
-          <a href="#main" className="skip-link">
-            Sari la conținut
-          </a>
-          <Header />
-          <main id="main">{children}</main>
-          <Footer />
-          <AccessibilityButton />
-          <ScrollToTop />
-        </div>
+        <AppProviders>
+          <div
+            className="min-h-screen bg-background text-foreground"
+            style={{
+              backgroundColor: "var(--background, #f8f5f0)",
+              color: "var(--foreground, #0c0c0c)",
+            }}
+          >
+            <a href="#main" className="skip-link">
+              Sari la conținut
+            </a>
+            <Header />
+            <main id="main">{children}</main>
+            <Footer />
+            <AccessibilityButton />
+            <ScrollToTop />
+          </div>
+        </AppProviders>
       </body>
     </html>
   );

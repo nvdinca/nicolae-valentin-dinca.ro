@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "./Container";
 import { SocialLinks } from "@/components/shared/SocialLinks";
+import { CookiePreferencesTrigger } from "@/components/cookie-consent/CookiePreferencesTrigger";
 
 export function Footer() {
   return (
@@ -23,6 +24,8 @@ export function Footer() {
             >
               Termeni și condiții
             </Link>
+            <span className="hidden text-foreground/40 md:inline" aria-hidden>·</span>
+            <CookiePreferencesTrigger />
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <SocialLinks />

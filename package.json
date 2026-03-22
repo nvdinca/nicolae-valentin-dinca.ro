@@ -1,18 +1,22 @@
 {
-  "name": "nicolae-valentin-dinca.ro",
+  "name": "nicolae-valentin-dinca-ro",
   "version": "0.1.0",
   "private": true,
   "engines": {
     "node": ">=18"
   },
   "scripts": {
-    "dev": "next dev --webpack",
     "build": "next build",
+    "dev": "next dev --webpack",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "siteplan:pdf": "node scripts/generate-siteplan-pdfs.cjs",
-    "favicon": "node scripts/generate-favicon.cjs"
+    "favicon": "node scripts/generate-favicon.cjs",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -20,6 +24,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.17.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -30,6 +35,7 @@
     "png-to-ico": "^3.0.1",
     "sharp": "^0.33.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.76.0"
   }
 }
